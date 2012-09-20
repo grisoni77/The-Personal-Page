@@ -16,10 +16,22 @@
 		* { padding: 0; margin: 0; }
 		body { background-color: #333; }
 		p { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
-		a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
-		a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
-		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
-		#about { width: 360px; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important; }
+		a { color: #ff5500; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+		/*a:hover { color: #777; border-bottom: 1px solid rgba(255,255,255,1); }*/
+		#monogram { display:none;width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+		#about { width: 360px; padding: 15px; margin: -35px 50px 0 auto !important; background: #111111; opacity: 0.8; 
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            transition: all 1s;
+            -moz-transition: all 1s; /* Firefox 4 */
+            -webkit-transition: all 1s; /* Safari and Chrome */
+            -o-transition: all 1s; /* Opera */
+        }
+        #about:hover {
+            opacity: 1;
+            background: #00;
+        }
 		@media (max-width: 767px) {
 			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
@@ -49,7 +61,7 @@
 $(function(){
      $(window).resize(function(){
          if($(this).width() >= 767){
-             $.backstretch("nh_bg.jpg", {speed: 150});
+             $.backstretch("me_cocco_cut.jpg", {speed: 150});
          }
       })
       .resize();//trigger resize on page load
